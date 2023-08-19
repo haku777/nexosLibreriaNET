@@ -1,0 +1,29 @@
+﻿using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace Nexos_Libreria_API.DataAccess.Entity
+{
+    public class Libros
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
+        [Required(ErrorMessage = "")]
+        public string Titulo { get; set; } = null!;
+        [Column("Fecha")]
+        [Required(ErrorMessage = "")]
+        public DateTime FechaY { get; set; }
+        [Required(ErrorMessage = "")]
+        public string Genero { get; set; } = null!;
+        public int Numero_de_paginas { get; set; }
+        public Autores Autor { get; set; } = null!;
+
+    }
+}

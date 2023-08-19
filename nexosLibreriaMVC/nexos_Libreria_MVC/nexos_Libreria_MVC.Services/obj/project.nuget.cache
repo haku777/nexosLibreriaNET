@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "DC0mBNVYi7TqZJkC4oOIhYg0jBfAW94TA07oGlE6s3BLDw5k6n5KcPoLYtb0NabrouNKTb7wYmsvQKwVtj5yLQ==",
+  "success": true,
+  "projectFilePath": "D:\\Xampp\\htdocs\\haku\\proyectos_NET\\C_NexosLibreriaNET_Entity_Web_&_API\\nexosLibreriaNET\\nexosLibreriaMVC\\nexos_Libreria_MVC\\nexos_Libreria_MVC.Services\\nexos_Libreria_MVC.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
+    "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,14 @@
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\bin\Debug\net7.0\Data.deps.json
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\bin\Debug\net7.0\Data.runtimeconfig.json
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\bin\Debug\net7.0\Data.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\bin\Debug\net7.0\Data.pdb
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\Data.csproj.AssemblyReference.cache
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\Data.AssemblyInfoInputs.cache
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\Data.AssemblyInfo.cs
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\Data.csproj.CoreCompileInputs.cache
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\Data.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\refint\Data.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\Data.pdb
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\Data.genruntimeconfig.cache
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaAPI\nexos_Libreria_API\Data\obj\Debug\net7.0\ref\Data.dll
