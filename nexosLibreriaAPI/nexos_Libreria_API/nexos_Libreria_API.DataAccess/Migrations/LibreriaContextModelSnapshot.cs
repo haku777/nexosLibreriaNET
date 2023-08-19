@@ -50,6 +50,24 @@ namespace Nexos_Libreria_API.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Autores", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Ciudad_procedencia = "Japan",
+                            Correo_electronico = "jimmy1076667239@gmail.com",
+                            Fecha_nacimiento = new DateTime(2023, 8, 19, 2, 59, 44, 966, DateTimeKind.Local).AddTicks(1491),
+                            Nombre_completo = "haku"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Ciudad_procedencia = "Japan",
+                            Correo_electronico = "v@v.com",
+                            Fecha_nacimiento = new DateTime(2023, 8, 19, 2, 59, 44, 966, DateTimeKind.Local).AddTicks(1509),
+                            Nombre_completo = "Violet"
+                        });
                 });
 
             modelBuilder.Entity("Nexos_Libreria_API.DataAccess.Entity.Libros", b =>

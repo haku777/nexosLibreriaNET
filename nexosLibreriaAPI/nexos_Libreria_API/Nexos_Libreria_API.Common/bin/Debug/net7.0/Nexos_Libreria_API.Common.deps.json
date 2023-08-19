@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Nexos_Libreria_API.Common/1.0.0": {
+        "runtime": {
+          "Nexos_Libreria_API.Common.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Nexos_Libreria_API.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

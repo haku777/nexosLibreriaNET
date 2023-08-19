@@ -15,15 +15,11 @@ namespace Nexos_Libreria_API.DataAccess.Entity
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        [Required(ErrorMessage = "")]
-        public string Titulo { get; set; } = null!;
-        [Column("Fecha")]
-        [Required(ErrorMessage = "")]
-        public DateTime FechaY { get; set; }
-        [Required(ErrorMessage = "")]
-        public string Genero { get; set; } = null!;
+        public string Titulo { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Genero { get; set; }
         public int Numero_de_paginas { get; set; }
-        public Autores Autor { get; set; } = null!;
+        public Autores Autor { get; set; }
 
     }
 }

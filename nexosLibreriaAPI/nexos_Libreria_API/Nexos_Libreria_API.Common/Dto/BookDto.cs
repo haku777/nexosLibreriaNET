@@ -11,11 +11,13 @@ namespace Nexos_Libreria_API.Common.Dto
     public class BookDto
     {
         public int Id { get; set; }
-        public string Titulo { get; set; } = null!;
+        [Required]
+        [MaxLength(50)]
+        public string Titulo { get; set; }
         public DateTime Fecha { get; set; }
-        public string Genero { get; set; } = null!;
+        public string Genero { get; set; }
         public int Numero_de_paginas { get; set; }
-        public AutorDto Id_autores { get; set; } = null!;
+        public AutorDto Autor { get; set; }
 
     }
 }

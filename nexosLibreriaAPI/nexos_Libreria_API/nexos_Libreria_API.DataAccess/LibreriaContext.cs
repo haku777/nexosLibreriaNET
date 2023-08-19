@@ -18,7 +18,25 @@ namespace Nexos_Libreria_API.DataAccess
         {
             modelBuilder.Entity<Libros>().ToTable("Libros");
             modelBuilder.Entity<Autores>().ToTable("Autores");
-            //base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Autores>()
+                .HasData(
+                    new Autores() { 
+                        Id = 1,
+                        Nombre_completo = "haku",
+                        Fecha_nacimiento = DateTime.Now,
+                        Ciudad_procedencia = "Japan",
+                        Correo_electronico = "jimmy1076667239@gmail.com"
+                    }, 
+                    new Autores()
+                    {
+                        Id = 2,
+                        Nombre_completo = "Violet",
+                        Fecha_nacimiento = DateTime.Now,
+                        Ciudad_procedencia = "Japan",
+                        Correo_electronico = "v@v.com"
+                    }
+                );
         }
     }
 }
