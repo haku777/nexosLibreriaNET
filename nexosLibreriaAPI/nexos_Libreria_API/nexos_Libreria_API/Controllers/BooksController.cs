@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
-using Azure;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Server.IIS.Core;
-using Microsoft.EntityFrameworkCore;
-using nexos_Libreria_API.Services.Interfaces;
-using Nexos_Libreria_API.Common.Constants;
 using Nexos_Libreria_API.Common.Dto;
-using Nexos_Libreria_API.DataAccess;
+using nexos_Libreria_API.Services.Interfaces;
+using Nexos_Libreria_API.Services.Services.Interfaces;
+using Nexos_Libreria_API.Common.Dto.Autors;
 using Nexos_Libreria_API.DataAccess.Entity;
 
 namespace nexos_Libreria_API.Controllers
@@ -16,131 +13,128 @@ namespace nexos_Libreria_API.Controllers
     public class BooksController : ControllerBase
     {
         private readonly ILogger<BooksController> _logger;
-        private LibreriaContext _context;
         private readonly IMapper _mapper;
         private readonly int maxBooks = 5;
         private IBooks _book;
+        private IAutors _autor;
         public BooksController
             (
-                LibreriaContext context
-                ,ILogger logger
+                ILogger<BooksController> logger
                 ,IMapper mapper
                 ,IBooks book
+                ,IAutors autor
             )
         {
-            _context = context;
+            _logger = logger;
             _mapper = mapper;
             _book = book;
+            _autor = autor;
         }
 
 
-        //inicialmente se utiliza la entidad, pero por tiempo solo se agregan las interfaces
-        //para continuar el desarrollo desde un servicio utilizando las dto
         [HttpGet]
+        [Route("GetBooks")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public async Task<ActionResult<IList<BookDto>>> Get()
+        public async Task<ActionResult<List<BookDto>>> GetBooks()
         {
             _logger.LogInformation("Obtener los libros");
-
-            //var result = await _book.Get();
-            var listBooks = await _context.Libros.ToListAsync();
-
-            return Ok(_mapper.Map<BookDto>(listBooks));
+            var result = await _book.Get();
+            return Ok(result);
         }
 
 
-        [HttpGet("Id:int", Name ="GetById")]
-        [ProducesResponseType(200)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<Task<BookDto>>> GetById(int Id) {
-            if(Id==0)
-                   return BadRequest();
+        [HttpGet]
+        [Route("GetBookById")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public async Task<ActionResult<BookDto>> GetBookById(int Id)
+        {
+            if (Id == 0)
+                return BadRequest();
 
-            //var result = await _book.GetById(id);
-            var result = await _context.Libros.FirstOrDefaultAsync( b => b.Id == Id );
+            var result = await _book.GetById(Id);
+
             if (result == null)
                 return NotFound();
-            
-            return Ok(_mapper.Map<BookDto>(result));
+
+            return Ok(result);
         }
-        
+
 
         [HttpPost]
         [Route("AddBook")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<ActionResult<BookDto>> AddBook([FromBody] BookCreateDto book)
         {
-            if (_context.Libros.Count() == maxBooks) { 
-                ModelState.AddModelError("LimiteLibros", "No es posible registrar el\r\nlibro, se alcanzó el máximo permitido");
+            var getListbooks = await _book.Get();
+            if (getListbooks.Count() == maxBooks)
+            {
+                ModelState.AddModelError("LimiteLibros", "No es posible registrar el libro, se alcanzó el máximo permitido");
                 return BadRequest(ModelState);
             }
-
-            if (await _context.Libros.FirstOrDefaultAsync(b => b.Titulo.ToLower() == book.Titulo.ToLower()) != null) { 
+            if (getListbooks.Where(b => b.Titulo.ToLower() == book.Titulo.ToLower()).FirstOrDefault() != null)
+            {
                 ModelState.AddModelError("LibroExiste", "El libro ya existe");
                 return BadRequest(ModelState);
             }
 
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
             if (book == null)
                 return BadRequest(book);
-            
-            Libros newBook = _mapper.Map<BookCreateDto>(book);
 
-            await _context.Libros.AddAsync(newBook);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtRoute("GetById", new { id = newBook.Id }, newBook);
+            var newBook = await _book.AddBook(book);
+            //return CreatedAtRoute("GetBookById", new { id = newBook.Id }, newBook);
+            return newBook;
         }
 
 
-        [HttpPut("{id:int}")]
+        [HttpPut]
+        [Route("UpdateBook")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> updateBook(int Id, [FromBody] BookUpdateDto book) {
+        public async Task<IActionResult> updateBook(int Id, [FromBody] BookUpdateDto book)
+        {
             if (book == null || Id != book.Id)
                 return BadRequest();
 
-            Libros updateBook = _mapper.Map<BookUpdateDto>(book);
-
-            _context.Libros.Update(updateBook);
-            await _context.SaveChangesAsync();
-
+            if (await _autor.GetById(book.Id) != null) { 
+                ModelState.AddModelError("AutorNoValido","El Autor no existe");
+                return BadRequest();
+            }
+            _book.UpdateBook(book);
             return NoContent();
-
         }
 
-
-        [HttpDelete("{id:int}")]
+        //solo para pruebas
+        [HttpDelete]
+        [Route("DeleteBook")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> Delete(int Id)
+        public async Task<IActionResult> DeleteBook(int Id)
         {
             if (Id == 0)
                 return BadRequest();
 
-            var book = await _context.Libros.FirstOrDefaultAsync(b => b.Id == Id);
+            var book = await _book.GetById(Id);
             if (book == null)
                 return NotFound();
 
-            _context.Libros.Remove(book);
-            await _context.SaveChangesAsync();
+            _book.DeleteBook(book);
 
             return NoContent();
         }
 
-        //mapeo manual
-        [HttpPost]
-        [Route("Other")]
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public  ActionResult Other([FromBody] BookDto book)
-        {
-            _book.Other(book);
-            return  Ok();
-        }
+        ////mapeo manual
+        //[HttpPost]
+        //[Route("Other")]
+        //[ProducesResponseType(StatusCodes.Status200OK)]
+        //public  ActionResult Other([FromBody] BookDto book)
+        //{
+        //    _book.Other(book);
+        //    return  Ok();
+        //}
 
         //_context.Libros.Add(book);
         //async await

@@ -184,6 +184,10 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
             }
           },
           "imports": [
@@ -233,9 +237,6 @@
             "projectReferences": {
               "D:\\Xampp\\htdocs\\haku\\proyectos_NET\\C_NexosLibreriaNET_Entity_Web_&_API\\nexosLibreriaNET\\nexosLibreriaAPI\\nexos_Libreria_API\\Nexos_Libreria_API.Common\\Nexos_Libreria_API.Common.csproj": {
                 "projectPath": "D:\\Xampp\\htdocs\\haku\\proyectos_NET\\C_NexosLibreriaNET_Entity_Web_&_API\\nexosLibreriaNET\\nexosLibreriaAPI\\nexos_Libreria_API\\Nexos_Libreria_API.Common\\Nexos_Libreria_API.Common.csproj"
-              },
-              "D:\\Xampp\\htdocs\\haku\\proyectos_NET\\C_NexosLibreriaNET_Entity_Web_&_API\\nexosLibreriaNET\\nexosLibreriaAPI\\nexos_Libreria_API\\nexos_Libreria_API.DataAccess\\Nexos_Libreria_API.DataAccess.csproj": {
-                "projectPath": "D:\\Xampp\\htdocs\\haku\\proyectos_NET\\C_NexosLibreriaNET_Entity_Web_&_API\\nexosLibreriaNET\\nexosLibreriaAPI\\nexos_Libreria_API\\nexos_Libreria_API.DataAccess\\Nexos_Libreria_API.DataAccess.csproj"
               },
               "D:\\Xampp\\htdocs\\haku\\proyectos_NET\\C_NexosLibreriaNET_Entity_Web_&_API\\nexosLibreriaNET\\nexosLibreriaAPI\\nexos_Libreria_API\\Nexos_Libreria_API.Services\\Nexos_Libreria_API.Services.csproj": {
                 "projectPath": "D:\\Xampp\\htdocs\\haku\\proyectos_NET\\C_NexosLibreriaNET_Entity_Web_&_API\\nexosLibreriaNET\\nexosLibreriaAPI\\nexos_Libreria_API\\Nexos_Libreria_API.Services\\Nexos_Libreria_API.Services.csproj"

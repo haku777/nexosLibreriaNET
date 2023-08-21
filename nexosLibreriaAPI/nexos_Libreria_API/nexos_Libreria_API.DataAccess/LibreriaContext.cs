@@ -37,6 +37,19 @@ namespace Nexos_Libreria_API.DataAccess
                         Correo_electronico = "v@v.com"
                     }
                 );
+
+            modelBuilder.Entity<Libros>()
+                .HasData(
+                    new Libros() {
+                        Id = 1,
+                        Titulo = "ApiBook",
+                        Id_Autor = 1,
+                        Genero = "Terror",
+                        Fecha = DateTime.Now,
+                        Numero_de_paginas = 7,
+                    }
+                );
+
         }
     }
 }

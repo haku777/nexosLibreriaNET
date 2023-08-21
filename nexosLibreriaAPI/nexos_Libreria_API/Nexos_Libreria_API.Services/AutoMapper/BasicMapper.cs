@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AutoMapper;
+﻿using AutoMapper;
 using Nexos_Libreria_API.Common.Dto;
 using Nexos_Libreria_API.DataAccess.Entity;
+using Nexos_Libreria_API.Common.Dto.Autors;
 
 namespace Nexos_Libreria_API.Services.AutoMapper
 {
@@ -18,10 +12,15 @@ namespace Nexos_Libreria_API.Services.AutoMapper
 
             CreateMap<Libros, BookDto>();
             CreateMap<BookDto, Libros>();
-            CreateMap<Libros, BookCreateDto>().ReverseMap();
             CreateMap<Libros, BookUpdateDto>().ReverseMap();
-            CreateMap<Autores, AutorDto>().ReverseMap();
-            //CreateMap<Libros, BookDto>().ReverseMap();
+            CreateMap<Libros, BookCreateDto>().ReverseMap();
+           
+            CreateMap<Autores, AutorsDto>().ReverseMap();
+            CreateMap<Autores, AutorsUpdateDto>().ReverseMap();
+            CreateMap<Autores, AutorsCreateDto>().ReverseMap();
+
+            //CreateMap<Libros, BookDto>()
+            //    .ForMember(l=>l.Id_Autor, l=>l.MapFrom(l=>l.Autor));
         }
     }
 }

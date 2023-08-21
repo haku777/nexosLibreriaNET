@@ -32,16 +32,14 @@ namespace Nexos_Libreria_API.DataAccess.Migrations
 
                     b.Property<string>("Ciudad_procedencia")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Ciudad_de_procedencia");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Correo_electronico")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Fecha_nacimiento")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("Fecha_de_nacimiento");
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Nombre_completo")
                         .IsRequired()
@@ -57,7 +55,7 @@ namespace Nexos_Libreria_API.DataAccess.Migrations
                             Id = 1,
                             Ciudad_procedencia = "Japan",
                             Correo_electronico = "jimmy1076667239@gmail.com",
-                            Fecha_nacimiento = new DateTime(2023, 8, 19, 2, 59, 44, 966, DateTimeKind.Local).AddTicks(1491),
+                            Fecha_nacimiento = new DateTime(2023, 8, 20, 19, 11, 44, 272, DateTimeKind.Local).AddTicks(9950),
                             Nombre_completo = "haku"
                         },
                         new
@@ -65,7 +63,7 @@ namespace Nexos_Libreria_API.DataAccess.Migrations
                             Id = 2,
                             Ciudad_procedencia = "Japan",
                             Correo_electronico = "v@v.com",
-                            Fecha_nacimiento = new DateTime(2023, 8, 19, 2, 59, 44, 966, DateTimeKind.Local).AddTicks(1509),
+                            Fecha_nacimiento = new DateTime(2023, 8, 20, 19, 11, 44, 272, DateTimeKind.Local).AddTicks(9963),
                             Nombre_completo = "Violet"
                         });
                 });
@@ -78,16 +76,15 @@ namespace Nexos_Libreria_API.DataAccess.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AutorId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("FechaY")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("Fecha");
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Genero")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Id_Autor")
+                        .HasColumnType("int");
 
                     b.Property<int>("Numero_de_paginas")
                         .HasColumnType("int");
@@ -98,16 +95,27 @@ namespace Nexos_Libreria_API.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AutorId");
+                    b.HasIndex("Id_Autor");
 
                     b.ToTable("Libros", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Fecha = new DateTime(2023, 8, 20, 19, 11, 44, 273, DateTimeKind.Local).AddTicks(131),
+                            Genero = "Terror",
+                            Id_Autor = 1,
+                            Numero_de_paginas = 7,
+                            Titulo = "ApiBook"
+                        });
                 });
 
             modelBuilder.Entity("Nexos_Libreria_API.DataAccess.Entity.Libros", b =>
                 {
                     b.HasOne("Nexos_Libreria_API.DataAccess.Entity.Autores", "Autor")
                         .WithMany()
-                        .HasForeignKey("AutorId")
+                        .HasForeignKey("Id_Autor")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

@@ -1,19 +1,21 @@
 # nexosLibreriaNET
-> :bulb: aplicacion .net api de libros
+> :bulb: Aplicacion en .NET 7
 
 `coding...`
 
-> :memo: <ins>Tareas</ins>
+> :memo: <ins>Lista de Tareas</ins>
 
 - [x] Repositorio
 - [ ] proyecto API
-> se creo el api utilizando SQL Server ya que internamente me esta generando un error el oracle pero en cuanto lo solucione actualizo el repositorio implementando los dos tipos de base de datos.
----
-> se dejan comentarios en dentro del codigo indicando lo realizado.
----
-> la base de datos se creo utilizando Entity Framewok Migration.
-- [ ] Proyecto MVC 
-> se crea proyecto incial con algunos ajustes, se continuara con la edicion del mismo al finalizar el api
+- [ ] Proyecto MVC
+
+> :warning: **Warning:** se creo el api utilizando SQL Server ya que internamente me esta generando un error el oracle pero en cuanto lo solucione actualizo el repositorio implementando los dos tipos de base de datos.
+
+> :information_source: **info:** se dejan comentarios dentro del codigo indicando lo realizado.
+
+> :information_source: **info:** la base de datos se creo utilizando Entity Framewok Migration.
+
+> :information_source: **info:** se crea proyecto incial con algunos ajustes, se continuara con la edicion del mismo al finalizar el api...
 
 
 ## Primera version

@@ -19,6 +19,8 @@ namespace Nexos_Libreria_API.DataAccess.Entity
         public DateTime Fecha { get; set; }
         public string Genero { get; set; }
         public int Numero_de_paginas { get; set; }
+        public int Id_Autor { get; set; }
+        [ForeignKey("Id_Autor")]
         public Autores Autor { get; set; }
 
     }

@@ -17,7 +17,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Nexos_Libreria_API.Common\Nexos_Libreria_API.Common.csproj" />
-    <ProjectReference Include="..\nexos_Libreria_API.DataAccess\Nexos_Libreria_API.DataAccess.csproj" />
     <ProjectReference Include="..\Nexos_Libreria_API.Services\Nexos_Libreria_API.Services.csproj" />
   </ItemGroup>
 

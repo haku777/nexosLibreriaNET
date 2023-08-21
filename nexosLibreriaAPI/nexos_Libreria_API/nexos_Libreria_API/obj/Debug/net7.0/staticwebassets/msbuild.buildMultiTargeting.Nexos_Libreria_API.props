@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Nexos_Libreria_API.props" />
+</Project>

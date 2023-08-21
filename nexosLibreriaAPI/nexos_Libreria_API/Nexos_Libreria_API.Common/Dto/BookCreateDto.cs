@@ -16,7 +16,7 @@ namespace Nexos_Libreria_API.Common.Dto
         public DateTime Fecha { get; set; }
         public string Genero { get; set; }
         public int Numero_de_paginas { get; set; }
-        public AutorDto Autor { get; set; }
-
+        [Required]
+        public int Id_Autor { get; set; }
     }
 }

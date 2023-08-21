@@ -1,5 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using nexos_Libreria_API.Services.Interfaces;
 using Nexos_Libreria_API.DataAccess;
+using Nexos_Libreria_API.Services.Services;
+using Nexos_Libreria_API.Services.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +15,9 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<LibreriaContext>(options => {
     options.UseSqlServer((builder.Configuration.GetConnectionString("LibraryConection")));
 });
+
+builder.Services.AddScoped<IBooks, BookService>();
+builder.Services.AddScoped<IAutors, AutorService>();
 
 var app = builder.Build();
 
