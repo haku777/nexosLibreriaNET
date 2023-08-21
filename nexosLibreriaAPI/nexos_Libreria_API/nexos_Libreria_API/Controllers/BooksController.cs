@@ -76,6 +76,18 @@ namespace nexos_Libreria_API.Controllers
                 ModelState.AddModelError("LibroExiste", "El libro ya existe");
                 return BadRequest(ModelState);
             }
+            try
+            {
+                AutorsDto autor =await _autor.GetById(book.Id_Autor);
+                if (autor == null)
+                {
+                    ModelState.AddModelError("AutorNoValido", "El autor no existe");
+                    return BadRequest(ModelState);
+                }
+            }
+            catch (Exception ex){
+                return BadRequest(ex.Message);
+            }
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

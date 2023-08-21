@@ -68,7 +68,7 @@ namespace Nexos_Libreria_API.Controllers
         public async Task<IActionResult> UpdateAutor(int Id, [FromBody] AutorsUpdateDto autor)
         {
 
-            if (autor == null || Id != autor.Id)
+            if (autor == null)
                 return NotFound();
 
             var result = await _autors.GetById(autor.Id);
@@ -76,7 +76,7 @@ namespace Nexos_Libreria_API.Controllers
             if (result == null)
                 return BadRequest();
 
-            _autors.UpdateAutor(autor);
+            await _autors.UpdateAutor(autor);
 
             return NoContent();
         }

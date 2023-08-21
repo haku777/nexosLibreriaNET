@@ -1,10 +1,32 @@
-﻿
+﻿@model List<Books>
 @{
     ViewData["Title"] = "Nexos Libreria NET";
-    //Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center" style="background:gray; height:100%">
-    <h1 class="display-4">Nexos Library NET</h1>
+<div class="row">
+    <div class="col-md-12">
+        <input type="text" id="filtro" class="form-control" placeholder="Filtrar por...">
+    </div>
 </div>
 
+<table class="table table-bordered table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Genero</th>
+            <th>Autor</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Titulo</td>
+                <td>@item.Genero</td>
+                <td>@item.Id_Autor</td>
+            </tr>
+        }
+    </tbody>
+</table>

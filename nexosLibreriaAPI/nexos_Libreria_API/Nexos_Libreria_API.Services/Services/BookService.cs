@@ -58,7 +58,6 @@ namespace Nexos_Libreria_API.Services.Services
         public void UpdateBook(BookUpdateDto book)
         {
             Libros mapBook = _mapper.Map<Libros>(book);
-            var result = _context.Libros.Update(mapBook);
             var findBook = _context.Autores.FirstOrDefault(a => a.Id == mapBook.Id);
             if (findBook != null)
             {
@@ -68,12 +67,10 @@ namespace Nexos_Libreria_API.Services.Services
         }
 
         public void DeleteBook(BookDto book) {
-            Libros mapBook = _mapper.Map<Libros>(book);
-            var result = _context.Libros.Update(mapBook);
-            var findBook = _context.Autores.FirstOrDefault(a => a.Id == mapBook.Id);
+            var findBook = _context.Libros.FirstOrDefault(a => a.Id == book.Id);
             if (findBook != null)
             {
-                _context.Libros.Remove(mapBook);
+                _context.Libros.Remove(findBook);
                 _context.SaveChanges();
             }
         }

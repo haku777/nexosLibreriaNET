@@ -16,12 +16,12 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/Xampp/htdocs/haku/proyectos_NET/C_NexosLibreriaNET_Entity_Web_&_API/nexosLibreriaNET/nexosLibreriaMVC/nexos_Libreria_MVC/nexos_Libreria_MVC/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[D:/Xampp/htdocs/haku/proyectos_NET/C_NexosLibreriaNET_Entity_Web_&_API/nexosLibreriaNET/nexosLibreriaMVC/nexos_Libreria_MVC/nexos_Libreria_MVC/Views/Home/AddBook.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBZGRCb29rLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Xampp/htdocs/haku/proyectos_NET/C_NexosLibreriaNET_Entity_Web_&_API/nexosLibreriaNET/nexosLibreriaMVC/nexos_Libreria_MVC/nexos_Libreria_MVC/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/Xampp/htdocs/haku/proyectos_NET/C_NexosLibreriaNET_Entity_Web_&_API/nexosLibreriaNET/nexosLibreriaMVC/nexos_Libreria_MVC/nexos_Libreria_MVC/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Xampp/htdocs/haku/proyectos_NET/C_NexosLibreriaNET_Entity_Web_&_API/nexosLibreriaNET/nexosLibreriaMVC/nexos_Libreria_MVC/nexos_Libreria_MVC/Views/Shared/Error.cshtml]
