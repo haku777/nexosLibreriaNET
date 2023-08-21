@@ -1,6 +1,11 @@
 /* _content/nexos_Libreria_MVC/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+.header[b-kgtsw50vev] {
+    display:flex;
+    justify-content: space-around;
+}
+
 
 a.navbar-brand[b-kgtsw50vev] {
   white-space: normal;
@@ -47,3 +52,52 @@ button.accept-policy[b-kgtsw50vev] {
   white-space: nowrap;
   line-height: 60px;
 }
+
+
+/*-----------------*/
+
+#loading[b-kgtsw50vev] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #e0e0ff77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader[b-kgtsw50vev] {
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background-image: linear-gradient(dodgerblue 16px, transparent 0), linear-gradient(#770077 16px, transparent 0), linear-gradient(#770077 16px, transparent 0), linear-gradient(dodgerblue 16px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left top, left bottom, right top, right bottom;
+    animation: rotate-b-kgtsw50vev 1s linear infinite;
+}
+
+@keyframes rotate-b-kgtsw50vev {
+    0% {
+        width: 64px;
+        height: 64px;
+        transform: rotate(0deg)
+    }
+
+    50% {
+        width: 30px;
+        height: 30px;
+        transform: rotate(180deg)
+    }
+
+    100% {
+        width: 64px;
+        height: 64px;
+        transform: rotate(360deg)
+    }
+}
+    
+

@@ -1,0 +1,34 @@
+﻿@model List<Autors>
+@{
+    ViewData["Title"] = "Nexos Libreria NET";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="text" id="filtro" class="form-control" placeholder="Filtrar por...">
+    </div>
+</div>
+
+<table class="table table-bordered table-striped mt-3">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>FechaNacimiento</th>
+            <th>CiudadProcedencia</th>
+            <th>CorreoElectronico</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nombre_completo</td>
+                <td>@item.Fecha_nacimiento</td>
+                <td>@item.Ciudad_procedencia</td>
+                <td>@item.Correo_electronico</td>
+            </tr>
+        }
+    </tbody>
+</table>

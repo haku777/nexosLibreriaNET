@@ -5,12 +5,12 @@ using System.Diagnostics;
 
 namespace nexos_Libreria_MVC.Controllers
 {
-    public class HomeController : Controller
+    public class BooksController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<BooksController> _logger;
         private readonly HttpClient _httpClient;
 
-        public HomeController(ILogger<HomeController> logger)
+        public BooksController(ILogger<BooksController> logger)
         {
             _logger = logger;
             _httpClient = new HttpClient();

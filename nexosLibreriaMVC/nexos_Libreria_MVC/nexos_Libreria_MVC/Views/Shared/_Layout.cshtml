@@ -7,57 +7,60 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/nexos_Libreria_MVC.styles.css" asp-append-version="true" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
-<body style="background-color:#e0e0ff;">
+<body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
+            <div class="container-fluid header">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">nexos Libreria NET</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </nav>
     </header>
     <div class="text-center">
         <h1 class="display-4">Nexos Library NET</h1>
     </div>
-
-    <div class="display-6 mx-auto p-2" style="width: 70vw;">
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a class="nav-link text-dark active" asp-area="" asp-controller="Home" asp-action="Index">Libros</a>
+    <div class="display-6 mx-auto p-2" style="width: 70vw; font-size:2rem;">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link load active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Libros" type="button" role="tab" aria-controls="home" aria-selected="true" asp-controller="Books" asp-action="Index">Libros</button>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddBook">Agregar Libro</a>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link load" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Agregar_Libro" type="button" role="tab" aria-controls="profile" data-bs-toggle="pill" data-bs-target="#pills-profile" aria-selected="false" asp-controller="Home" asp-action="AddBook">Agregar Libro</button>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddBook">Autores</a>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Autores" type="button" role="tab" aria-controls="contact" aria-selected="false" asp-controller="Autors" asp-action="Index">Autores</button>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AddBook">Agregar Autor</a>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Agregar_Autor" type="button" role="tab" aria-controls="agregarAutor" aria-selected="false" asp-controller="Home" asp-action="AddBook">Agregar Autor</button>
             </li>
         </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="Libros" role="tabpanel" aria-labelledby="home-tab">
+                @RenderBody()
+            </div>
+            <div class="tab-pane fade" id=" Agregar_Libro" role="tabpanel" aria-labelledby="contact-tab">
+                @RenderBody()
+            </div>
+            <div class="tab-pane fade" id="Autores" role="tabpanel" aria-labelledby="contact-tab">
+                @RenderBody()
+            </div>
+            <div class="tab-pane fade" id="Agregar_Autor" role="tabpanel" aria-labelledby="contact-tab">
+                @RenderBody()
+            </div>
+        </div>
     </div>
-
-
-    <div class="container">
+@*    <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
+    </div>*@
+    <div id="loading">
+        <div class="loader"></div>
     </div>
-
     <footer class="border-top footer text-muted">
         <div class="container">
             Created by Jimmy Yahir Gutierrez &copy; 2023 - nexos_Libreria_MVC
@@ -70,8 +73,24 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
-
-    <script src="https://cdn.jsdelivr.net/npm/popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+        <script>
+            (()=>{
+                let load = document.querySelector("#loading");
+                let loadclass = document.querySelectorAll(".load");
+                function loader() {
+                    load.style.display = "none";
+                }
+                function timer(){
+                    setTimeout(loader, 1000);
+                }
+                timer();
+                loadclass.forEach(button => {
+                    button.addEventListener("click", function () {
+                    load.style.display = "flex";
+                        timer();
+                    });
+                });
+            })();
+        </script>
 </body>
 </html>

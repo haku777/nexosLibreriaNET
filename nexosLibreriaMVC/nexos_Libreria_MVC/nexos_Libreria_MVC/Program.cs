@@ -13,6 +13,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+builder.Configuration.GetSection("ApiConfiguration");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -21,7 +23,7 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}");
+    name: "default"
+    ,pattern: "{controller=Books}/{action=Index}");
 
 app.Run();
