@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid header">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">nexos Libreria NET</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="./nexos.png" alt="nexos logo"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -29,26 +29,29 @@
                 <button class="nav-link load active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Libros" type="button" role="tab" aria-controls="home" aria-selected="true" asp-controller="Books" asp-action="Index">Libros</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link load" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Agregar_Libro" type="button" role="tab" aria-controls="profile" data-bs-toggle="pill" data-bs-target="#pills-profile" aria-selected="false" asp-controller="Home" asp-action="AddBook">Agregar Libro</button>
+                <button class="nav-link load" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Agregar_Libro" type="button" role="tab" aria-controls="profile" data-bs-toggle="pill" data-bs-target="#pills-profile" aria-selected="false" asp-controller="Books" asp-action="AddBook">Agregar Libro</button>
             </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Autores" type="button" role="tab" aria-controls="contact" aria-selected="false" asp-controller="Autors" asp-action="Index">Autores</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Agregar_Autor" type="button" role="tab" aria-controls="agregarAutor" aria-selected="false" asp-controller="Home" asp-action="AddBook">Agregar Autor</button>
+                <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Agregar_Autor" type="button" role="tab" aria-controls="agregarAutor" aria-selected="false" asp-controller="Autors" asp-action="AddAutor">Agregar Autor</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="Libros" role="tabpanel" aria-labelledby="home-tab">
-                @RenderBody()
+                <br>@RenderBody()
             </div>
-            <div class="tab-pane fade" id=" Agregar_Libro" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="tab-pane fade" id="Agregar_Libro" role="tabpanel" aria-labelledby="contact-tab">
+                <br><iframe src="https://haku777.com/APortfolio/components/onePage/round.html" frameborder="0"></iframe>
                 @RenderBody()
             </div>
             <div class="tab-pane fade" id="Autores" role="tabpanel" aria-labelledby="contact-tab">
+                <br><iframe src="https://haku777.com/APortfolio/components/onePage/round.html" frameborder="0"></iframe>
                 @RenderBody()
             </div>
             <div class="tab-pane fade" id="Agregar_Autor" role="tabpanel" aria-labelledby="contact-tab">
+                <br><iframe src="https://haku777.com/APortfolio/components/onePage/round.html" frameborder="0"></iframe>
                 @RenderBody()
             </div>
         </div>

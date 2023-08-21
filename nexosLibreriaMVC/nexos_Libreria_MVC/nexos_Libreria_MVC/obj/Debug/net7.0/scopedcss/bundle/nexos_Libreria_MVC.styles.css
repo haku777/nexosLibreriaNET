@@ -6,7 +6,6 @@ for details on configuring this project to bundle and minify static web assets. 
     justify-content: space-around;
 }
 
-
 a.navbar-brand[b-kgtsw50vev] {
   white-space: normal;
   text-align: center;
@@ -53,7 +52,6 @@ button.accept-policy[b-kgtsw50vev] {
   line-height: 60px;
 }
 
-
 /*-----------------*/
 
 #loading[b-kgtsw50vev] {
@@ -99,5 +97,13 @@ button.accept-policy[b-kgtsw50vev] {
         transform: rotate(360deg)
     }
 }
-    
+
+iframe[b-kgtsw50vev] {
+    width: 40vw;
+    height: 50vh;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
 

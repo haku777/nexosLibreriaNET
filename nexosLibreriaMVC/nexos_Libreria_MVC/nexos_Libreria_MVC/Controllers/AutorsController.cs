@@ -15,24 +15,14 @@ namespace nexos_Libreria_MVC.Controllers
 
         public async Task<IActionResult> Index()
         {
+            HttpResponseMessage response = await _httpClient.GetAsync("https://localhost:7127/api/Autors/GetAutors");
+            if (response.IsSuccessStatusCode)
             {
-                HttpResponseMessage response = await _httpClient.GetAsync("https://localhost:7127/api/Autors/GetAutors");
-                if (response.IsSuccessStatusCode)
-                {
-                    var jsonData = await response.Content.ReadAsStringAsync();
-                    var data = JsonConvert.DeserializeObject<List<Books>>(jsonData);
-                    return View(data);
-
-                    //var data = await response.Content.ReadAsStringAsync();
-                    //// Procesa los datos de la API según tus necesidades
-                    //return View(data);
-                }
-                else
-                {
-                    // Manejo de errores
-                    return View("Error");
-                }
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var data = JsonConvert.DeserializeObject<List<Books>>(jsonData);
+                return View(data);
             }
+            return View();
         }
     }
 }

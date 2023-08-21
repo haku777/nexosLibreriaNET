@@ -1,0 +1,12 @@
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\bin\Debug\net7.0\nexos_Libreria_MVC.Common.deps.json
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\bin\Debug\net7.0\nexos_Libreria_MVC.Common.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\bin\Debug\net7.0\nexos_Libreria_MVC.Common.pdb
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\nexos_Libreria_MVC.Common.csproj.AssemblyReference.cache
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\nexos_Libreria_MVC.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\nexos_Libreria_MVC.Common.AssemblyInfoInputs.cache
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\nexos_Libreria_MVC.Common.AssemblyInfo.cs
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\nexos_Libreria_MVC.Common.csproj.CoreCompileInputs.cache
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\nexos_Libreria_MVC.Common.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\refint\nexos_Libreria_MVC.Common.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\nexos_Libreria_MVC.Common.pdb
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC.Common\obj\Debug\net7.0\ref\nexos_Libreria_MVC.Common.dll
