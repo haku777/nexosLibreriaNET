@@ -6,7 +6,7 @@
 > :memo: <ins>Lista de Tareas</ins>
 
 - [x] Repositorio
-- [ ] proyecto API
+- [x] proyecto API
 - [ ] Proyecto MVC
 
 > :warning: **Warning:** se creo el api utilizando SQL Server ya que internamente me esta generando un error el oracle pero en cuanto lo solucione actualizo el repositorio implementando los dos tipos de base de datos.
@@ -19,6 +19,11 @@
 
 
 ## Primera version
+<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/logo.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/api.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/get.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/load.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/mvc.png" width="400" height="300">
 <img src="https://haku777.com/img/examples/develop.jpg" width="400" height="300">
 
 > Creado por <a href="https://haku777.com/" target="_blank">Jimmy Yahir Gutierrez</a> &copy; 2023

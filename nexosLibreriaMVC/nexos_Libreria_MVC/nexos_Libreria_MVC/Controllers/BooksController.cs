@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using Newtonsoft.Json;
 using nexos_Libreria_MVC.Models;
 using System.Diagnostics;
@@ -20,14 +21,22 @@ namespace nexos_Libreria_MVC.Controllers
 
         public async Task<IActionResult> Index()
         {
-            HttpResponseMessage response = await _httpClient.GetAsync("https://localhost:7127/api/Books/GetBooks");
-            if (response.IsSuccessStatusCode)
+            try
             {
-                var jsonData = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<List<Books>>(jsonData);
-                return View(data);
+                HttpResponseMessage response = await _httpClient.GetAsync("https://localhost:7127/api/Books/GetBooks");
+                if (response.IsSuccessStatusCode)
+                {
+                    var jsonData = await response.Content.ReadAsStringAsync();
+                    var data = JsonConvert.DeserializeObject<List<Books>>(jsonData);
+                    return View(data);
+                }
+                else {
+                    return View(null);
+                }
             }
-            return View();
+            catch (Exception ex){
+                return View("Error");
+            }
         }
 
         public async Task<IActionResult> AddBook()
