@@ -19,7 +19,7 @@ namespace nexos_Libreria_MVC.Controllers
             if (response.IsSuccessStatusCode)
             {
                 var jsonData = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<List<Books>>(jsonData);
+                var data = JsonConvert.DeserializeObject<List<Autors>>(jsonData);
                 return View(data);
             }
             return View();

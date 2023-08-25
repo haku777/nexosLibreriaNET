@@ -4,7 +4,6 @@ using Nexos_Libreria_API.Common.Dto;
 using nexos_Libreria_API.Services.Interfaces;
 using Nexos_Libreria_API.Services.Services.Interfaces;
 using Nexos_Libreria_API.Common.Dto.Autors;
-using Nexos_Libreria_API.DataAccess.Entity;
 
 namespace nexos_Libreria_API.Controllers
 {
@@ -105,16 +104,20 @@ namespace nexos_Libreria_API.Controllers
         [Route("UpdateBook")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> updateBook(int Id, [FromBody] BookUpdateDto book)
+        public async Task<IActionResult> updateBook([FromBody] BookUpdateDto book)
         {
-            if (book == null || Id != book.Id)
+            if (book == null)
                 return BadRequest();
 
-            if (await _autor.GetById(book.Id) != null) { 
+            var findBook = await _book.GetById(book.Id);
+            if (findBook == null)
+                return NotFound();
+
+            if (await _autor.GetById(book.Id_Autor) == null) { 
                 ModelState.AddModelError("AutorNoValido","El Autor no existe");
                 return BadRequest();
             }
-            _book.UpdateBook(book);
+            await _book.UpdateBook(book);
             return NoContent();
         }
 

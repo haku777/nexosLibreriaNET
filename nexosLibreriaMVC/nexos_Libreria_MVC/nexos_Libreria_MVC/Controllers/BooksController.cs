@@ -31,7 +31,7 @@ namespace nexos_Libreria_MVC.Controllers
                     return View(data);
                 }
                 else {
-                    return View(null);
+                    return View("Error");
                 }
             }
             catch (Exception ex){

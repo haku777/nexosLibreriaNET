@@ -1,4 +1,5 @@
-﻿using Nexos_Libreria_API.Common.Dto;
+﻿using Microsoft.AspNetCore.Mvc;
+using Nexos_Libreria_API.Common.Dto;
 
 namespace nexos_Libreria_API.Services.Interfaces
 {
@@ -6,7 +7,7 @@ namespace nexos_Libreria_API.Services.Interfaces
     {
         Task<List<BookDto>> Get();
         Task<BookDto> GetById(int Id);
-        void UpdateBook(BookUpdateDto Book);
+        Task UpdateBook(BookUpdateDto Book);
         Task<BookDto> AddBook(BookCreateDto Book);
         void DeleteBook(BookDto book);
 

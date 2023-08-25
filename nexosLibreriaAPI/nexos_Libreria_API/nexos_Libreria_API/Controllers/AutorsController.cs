@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using Nexos_Libreria_API.Common.Dto;
-using nexos_Libreria_API.Services.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
 using Nexos_Libreria_API.Common.Dto.Autors;
 using Nexos_Libreria_API.Services.Services.Interfaces;
 
@@ -64,8 +61,10 @@ namespace Nexos_Libreria_API.Controllers
         [HttpPut]
         [Route("UpdateAutor")]
         [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public async Task<IActionResult> UpdateAutor(int Id, [FromBody] AutorsUpdateDto autor)
+        public async Task<IActionResult> UpdateAutor([FromBody] AutorsUpdateDto autor)
         {
 
             if (autor == null)
@@ -82,7 +81,6 @@ namespace Nexos_Libreria_API.Controllers
         }
 
 
-        //solo para pruebas
         [HttpDelete]
         [Route("DeleteAutor")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
@@ -97,7 +95,7 @@ namespace Nexos_Libreria_API.Controllers
             if (autor == null)
                 return NotFound();
 
-            _autors.DeleteAutor(autor);
+            await _autors.DeleteAutor(autor);
 
             return NoContent();
         }

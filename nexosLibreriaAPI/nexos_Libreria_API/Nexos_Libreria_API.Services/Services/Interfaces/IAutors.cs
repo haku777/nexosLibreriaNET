@@ -9,7 +9,7 @@ namespace Nexos_Libreria_API.Services.Services.Interfaces
         Task<AutorsDto> GetById(int Id);
         Task UpdateAutor(AutorsUpdateDto Autor);
         Task<AutorsDto> AddAutor(AutorsCreateDto Autor);
-        void DeleteAutor(AutorsDto Autor);
+        Task DeleteAutor(AutorsDto Autor);
     }
 
 }

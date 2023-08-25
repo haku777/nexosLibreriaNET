@@ -1,7 +1,5 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Nexos_Libreria_API.Common.Dto;
 using Nexos_Libreria_API.Common.Dto.Autors;
 using Nexos_Libreria_API.DataAccess;
 using Nexos_Libreria_API.DataAccess.Entity;
@@ -50,23 +48,27 @@ namespace Nexos_Libreria_API.Services.Services
             AutorsDto newBookAdded = await GetById(result.Entity.Id);
             return newBookAdded;
         }
-        //el metodo update no esta funcionando correctamente 
-        //'The instance of entity type 'Autores' cannot be tracked because another instance with the same key value for {'Id'} is already being tracked.  
+  
         public async Task UpdateAutor(AutorsUpdateDto Autor)
         {
-            var mapAutor = _mapper.Map<Autores>(Autor);
-            _context.Autores.Update(mapAutor);
-            await _context.SaveChangesAsync();
+            var xd = _context.Autores.FirstOrDefault(a=>a.Id == Autor.Id);
+            if (xd != null) {
+                xd.Nombre_completo = Autor.Nombre_completo;
+                xd.Fecha_nacimiento = Autor.Fecha_nacimiento;
+                xd.Ciudad_procedencia = Autor.Ciudad_procedencia;
+                xd.Correo_electronico = Autor.Correo_electronico;
+                await _context.SaveChangesAsync();
+            }
         }
 
 
-        public void DeleteAutor(AutorsDto autor) 
+        public async Task DeleteAutor(AutorsDto autor) 
         {
             var findAutor = _context.Autores.FirstOrDefault(a=>a.Id == autor.Id);
             if(findAutor != null)
             {
                 _context.Autores.Remove(findAutor);
-                _context.SaveChangesAsync();
+                await _context.SaveChangesAsync();
             }
         }
     }
