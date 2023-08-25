@@ -1,18 +1,9 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.ComponentModel.DataAnnotations;
-using AutoMapper;
+﻿using AutoMapper;
 using Nexos_Libreria_API.Common.Dto;
 using Nexos_Libreria_API.DataAccess;
 using Microsoft.EntityFrameworkCore;
 using Nexos_Libreria_API.DataAccess.Entity;
 using nexos_Libreria_API.Services.Interfaces;
-using Microsoft.AspNetCore.Mvc;
-using Nexos_Libreria_API.Common.Dto.Autors;
 
 namespace Nexos_Libreria_API.Services.Services
 {
@@ -55,14 +46,17 @@ namespace Nexos_Libreria_API.Services.Services
             return newBookAdded;
         }
 
-        public void UpdateBook(BookUpdateDto book)
+        public async Task UpdateBook(BookUpdateDto book)
         {
-            Libros mapBook = _mapper.Map<Libros>(book);
-            var findBook = _context.Autores.FirstOrDefault(a => a.Id == mapBook.Id);
-            if (findBook != null)
+            var existingBook = _context.Libros.FirstOrDefault(b => b.Id == book.Id);
+            if (existingBook != null)
             {
-                _context.Libros.Update(mapBook);
-                _context.SaveChanges();
+                existingBook.Titulo = book.Titulo;
+                existingBook.Fecha = book.Fecha;
+                existingBook.Genero = book.Genero;
+                existingBook.Numero_de_paginas = book.N_paginas;
+                existingBook.Id_Autor = book.Id_Autor;
+                await _context.SaveChangesAsync();
             }
         }
 

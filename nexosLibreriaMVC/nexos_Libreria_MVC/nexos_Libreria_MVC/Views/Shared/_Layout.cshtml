@@ -26,34 +26,23 @@
     <div class="display-6 mx-auto p-2" style="width: 70vw; font-size:2rem;">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link load active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Libros" type="button" role="tab" aria-controls="home" aria-selected="true" asp-controller="Books" asp-action="Index">Libros</button>
+                <button class="nav-link load active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="home" aria-selected="true" asp-controller="Books" asp-action="Index">Libros</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link load" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Agregar_Libro" type="button" role="tab" aria-controls="profile" data-bs-toggle="pill" data-bs-target="#pills-profile" aria-selected="false" asp-controller="Books" asp-action="AddBook">Agregar Libro</button>
+                <button class="nav-link load" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="profile" data-bs-toggle="pill" data-bs-target="#pills-profile" aria-selected="false" asp-controller="Books" asp-action="AddBook">Agregar Libro</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Autores" type="button" role="tab" aria-controls="contact" aria-selected="false" asp-controller="Autors" asp-action="Index">Autores</button>
+                <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="contact" aria-selected="false" asp-controller="Autors" asp-action="Index">Autores</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Agregar_Autor" type="button" role="tab" aria-controls="agregarAutor" aria-selected="false" asp-controller="Autors" asp-action="AddAutor">Agregar Autor</button>
+                <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="agregarAutor" aria-selected="false" asp-controller="Autors" asp-action="AddAutor">Agregar Autor</button>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="Libros" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-pane fade show active" id="Proofs" role="tabpanel" aria-labelledby="home-tab">
                 <br>@RenderBody()
             </div>
-            <div class="tab-pane fade" id="Agregar_Libro" role="tabpanel" aria-labelledby="contact-tab">
-                <br><iframe src="https://haku777.com/APortfolio/components/onePage/round.html" frameborder="0"></iframe>
-                @RenderBody()
-            </div>
-            <div class="tab-pane fade" id="Autores" role="tabpanel" aria-labelledby="contact-tab">
-                <br><iframe src="https://haku777.com/APortfolio/components/onePage/round.html" frameborder="0"></iframe>
-                @RenderBody()
-            </div>
-            <div class="tab-pane fade" id="Agregar_Autor" role="tabpanel" aria-labelledby="contact-tab">
-                <br><iframe src="https://haku777.com/APortfolio/components/onePage/round.html" frameborder="0"></iframe>
-                @RenderBody()
-            </div>
+
         </div>
     </div>
 @*    <div class="container">
