@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\nexos_Libreria_MVC.Common\nexos_Libreria_MVC.Common.csproj" />
+    <ProjectReference Include="..\nexos_Libreria_MVC.Services\nexos_Libreria_MVC.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="Views\Autors\Index.cshtml">
       <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>

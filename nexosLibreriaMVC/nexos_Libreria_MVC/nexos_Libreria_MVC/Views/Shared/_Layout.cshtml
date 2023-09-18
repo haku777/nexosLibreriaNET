@@ -26,14 +26,19 @@
     <div class="display-6 mx-auto p-2" style="width: 70vw; font-size:2rem;">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link load active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="home" aria-selected="true" asp-controller="Books" asp-action="Index">Libros</button>
+                <button class="nav-link load active" id="home-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="home" aria-selected="true" href="@Url.Action("Index", "Books")">Libros</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link load" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="profile" data-bs-toggle="pill" data-bs-target="#pills-profile" aria-selected="false" asp-controller="Books" asp-action="AddBook">Agregar Libro</button>
+                <button class="nav-link load" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="profile" data-bs-toggle="pill" data-bs-target="#pills-profile" asp-controller="Books" asp-action="AddBook">Agregar Libro</button>
             </li>
             <li class="nav-item" role="presentation">
+                <button class="nav-link load" id="profile-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="profile" data-bs-toggle="pill" data-bs-target="#pills-profile" asp-controller="Books" asp-action="AddBook">Agregar Libro</button>
+
+                <a class="nav-link load" data-bs-target="Proofs" aria-controls="contact" type="button" role="tab" aria-selected="false" toggle="pill" href="@Url.Action("Index", "Autors")">Autoress</a>
+            </li>
                 <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="contact" aria-selected="false" asp-controller="Autors" asp-action="Index">Autores</button>
             </li>
+            <li class="nav-item" role="presentation">
             <li class="nav-item" role="presentation">
                 <button class="nav-link load" id="contact-tab" data-bs-toggle="tab" data-bs-target="#Proofs" type="button" role="tab" aria-controls="agregarAutor" aria-selected="false" asp-controller="Autors" asp-action="AddAutor">Agregar Autor</button>
             </li>

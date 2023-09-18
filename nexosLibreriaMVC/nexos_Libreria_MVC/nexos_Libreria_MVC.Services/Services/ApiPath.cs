@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Configuration;
+using nexos_Libreria_MVC.Services.Services.Interfaces;
 
 namespace nexos_Libreria_MVC.Services.Services
 {
-    public abstract class ApiPath
+    public class ApiPath : IapiPath
     {
-        public string UrlApi;
-        public ApiPath() 
-        { 
-            UrlApi = string.Empty;
+        private readonly IConfiguration _configuration;
+
+        public ApiPath(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
+        public string GetApiPath()
+        {
+            return _configuration.GetSection("ApiConfiguration")["ApiPath"]??"";
         }
     }
 }

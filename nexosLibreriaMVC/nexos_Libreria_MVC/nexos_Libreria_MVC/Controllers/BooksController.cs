@@ -1,61 +1,37 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.DotNet.Scaffolding.Shared.Messaging;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using Microsoft.AspNetCore.Mvc;
 using nexos_Libreria_MVC.Models;
-using System.Diagnostics;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+using nexos_Libreria_MVC.Services.Services.Interfaces;
+using nexos_Libreria_MVC.Common.Dto;
 
 namespace nexos_Libreria_MVC.Controllers
 {
     public class BooksController : Controller
     {
         private readonly ILogger<BooksController> _logger;
-        private readonly HttpClient _httpClient;
+        private readonly IBooks _book;
 
-        public BooksController(ILogger<BooksController> logger)
+        public BooksController(
+            ILogger<BooksController> logger,
+            IBooks book
+            )
         {
             _logger = logger;
-            _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7127/");
+            _book = book;
         }
 
         public async Task<IActionResult> Index()
         {
-            try
-            {
-                HttpResponseMessage response = await _httpClient.GetAsync("https://localhost:7127/api/Books/GetBooks");
-                if (response.IsSuccessStatusCode)
-                {
-                    var jsonData = await response.Content.ReadAsStringAsync();
-                    var data = JsonConvert.DeserializeObject<List<Books>>(jsonData);
-                    return View(data);
-                }
-                else {
-                    return View("Error");
-                }
-            }
-            catch (Exception ex){
-                return View("Error");
-            }
+
+                ViewBag.Process = "Wtf";
+                var getBooks = await _book.Get();
+                return View(getBooks);
+
         }
 
         public async Task<IActionResult> AddBook()
         {
-            HttpResponseMessage response = await _httpClient.GetAsync("https://localhost:7127/api/Books/GetBooks");
-            if (response.IsSuccessStatusCode)
-            {
-                var jsonData = await response.Content.ReadAsStringAsync();
-                var data = JsonConvert.DeserializeObject<List<Books>>(jsonData);
-                //return View(data);
-            }
             return View();
         }
-
-
-
-
-
-
-
     }
 }
