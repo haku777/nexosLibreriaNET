@@ -1,21 +1,6 @@
 /* _content/nexos_Libreria_MVC/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-.header[b-kgtsw50vev] {
-    display:flex;
-    justify-content: space-around;
-}
-
-a.navbar-brand[b-kgtsw50vev] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
-
-a[b-kgtsw50vev] {
-  color: #0077cc;
-}
-
 .btn-primary[b-kgtsw50vev] {
   color: #fff;
   background-color: #1b6ec2;
@@ -106,4 +91,21 @@ iframe[b-kgtsw50vev] {
     pointer-events: none;
     overflow: hidden;
 }
+/*------------------------*/
 
+.header[b-kgtsw50vev] {
+    display: flex;
+    justify-content: space-around;
+}
+
+a.navbar-brand[b-kgtsw50vev] {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a[b-kgtsw50vev] {
+    background-color: salmon;
+    color: dodgerblue;
+    font-size: 1.2rem;
+}

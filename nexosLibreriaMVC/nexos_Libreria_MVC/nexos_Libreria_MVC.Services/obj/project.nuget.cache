@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "DC0mBNVYi7TqZJkC4oOIhYg0jBfAW94TA07oGlE6s3BLDw5k6n5KcPoLYtb0NabrouNKTb7wYmsvQKwVtj5yLQ==",
+  "dgSpecHash": "aktyzVc14fnmAC4Wo9DRjdg9h8+3wjm/uhNnRWhzb8xshI3sGilaoHdiSRd8kBuNeDDPC8/G1xr5JWEGKHBdAA==",
   "success": true,
   "projectFilePath": "D:\\Xampp\\htdocs\\haku\\proyectos_NET\\C_NexosLibreriaNET_Entity_Web_&_API\\nexosLibreriaNET\\nexosLibreriaMVC\\nexos_Libreria_MVC\\nexos_Libreria_MVC.Services\\nexos_Libreria_MVC.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.extensions.configuration\\7.0.0\\microsoft.extensions.configuration.7.0.0.nupkg.sha512",
     "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
-    "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512"
+    "C:\\Users\\jimmy\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\jimmy\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -221,3 +221,7 @@ D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibr
 D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC\obj\Debug\net7.0\nexos_Libreria_MVC.pdb
 D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC\obj\Debug\net7.0\nexos_Libreria_MVC.genruntimeconfig.cache
 D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC\obj\Debug\net7.0\ref\nexos_Libreria_MVC.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC\bin\Debug\net7.0\nexos_Libreria_MVC.Common.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC\bin\Debug\net7.0\nexos_Libreria_MVC.Services.dll
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC\bin\Debug\net7.0\nexos_Libreria_MVC.Common.pdb
+D:\Xampp\htdocs\haku\proyectos_NET\C_NexosLibreriaNET_Entity_Web_&_API\nexosLibreriaNET\nexosLibreriaMVC\nexos_Libreria_MVC\nexos_Libreria_MVC\bin\Debug\net7.0\nexos_Libreria_MVC.Services.pdb

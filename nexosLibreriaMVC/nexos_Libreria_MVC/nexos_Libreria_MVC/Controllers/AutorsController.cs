@@ -10,12 +10,20 @@ namespace nexos_Libreria_MVC.Controllers
         public AutorsController()
         {
             _httpClient = new HttpClient();
-            _httpClient.BaseAddress = new Uri("https://localhost:7127/");
         }
+
 
         public async Task<IActionResult> Index()
         {
+
+            //en lugar de de hacer el llamado al api desde aqui se hace mejor en una interfaz
+            // al services etc
             HttpResponseMessage response = await _httpClient.GetAsync("https://localhost:7127/api/Autors/GetAutors");
+
+
+
+
+
             if (response.IsSuccessStatusCode)
             {
                 var jsonData = await response.Content.ReadAsStringAsync();

@@ -1,28 +1,50 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using nexos_Libreria_MVC.Common.Dto;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using nexos_Libreria_MVC.Services.Services.Interfaces;
 
 namespace nexos_Libreria_MVC.Services.Services.Api
 {
-    internal class BooksApiServices
+    public class BooksApiServices : IBooks
     {
-        public string ApiPath = "https://localhost:7127";
-        public BooksApiServices() {
 
-            //var builder = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("appsettings.json").Build();
-            //public string api_Path= builder.GetSection("ApiConfiguration:ApiPath").Value;
+        private readonly HttpClient _httpClient;
+        private readonly IapiPath _apiPath;
+
+        public BooksApiServices(IapiPath apiPath) {
+            
+            _apiPath = apiPath;
+
+            _httpClient = new HttpClient();
+            //_httpClient.BaseAddress = new Uri("httpsss://localhost:7127/");
+        }
+
+        public async Task<IList<BookDto>> Get()
+        {
+            string path = _apiPath.GetApiPath();
+            HttpResponseMessage response = await _httpClient.GetAsync(path + "/api/Books/GetBooks");
+            
+            List<BookDto> books = new List<BookDto>();
+            if (response.IsSuccessStatusCode)
+            {
+                var jsonData = await response.Content.ReadAsStringAsync();
+                var data = JsonConvert.DeserializeObject<List<BookDto>>(jsonData);
+                return data;
+            }
+            else
+            {
+                //throw new Exception("xd");
+                return books;
+            }
         }
 
 
-        //public async IList<BookDto> Get(string path) {
-        
-        
-        //return await xd
-        //}
+
+        //Books
+        //GET /api/Books/GetBooks
+        //GET /api/Books/GetBookById
+        //POST /api/Books/AddBook
+        //PUT /api/Books/UpdateBook
+        //DELETE /api/Books/DeleteBook
     }
 }

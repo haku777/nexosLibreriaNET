@@ -1,7 +1,16 @@
+using nexos_Libreria_MVC.Services.Services;
+using nexos_Libreria_MVC.Services.Services.Api;
+using nexos_Libreria_MVC.Services.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<IBooks, BooksApiServices>();
+builder.Services.AddScoped<IapiPath, ApiPath>();
+
+
 
 var app = builder.Build();
 
@@ -13,7 +22,6 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-builder.Configuration.GetSection("ApiConfiguration");
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
