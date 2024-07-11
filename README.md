@@ -26,4 +26,4 @@
 <img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/mvc.png" width="400" height="300">
 <img src="https://haku777.com/img/examples/develop.jpg" width="400" height="300">
 
-> Creado por <a href="https://haku777.com/" target="_blank">Jimmy Yahir Gutierrez</a> &copy; 2023
+> Creado por <a href="https://haku777.com/" target="_blank">Jimmy Yahir Gutierrez</a> &copy; Sep 18, 2023
