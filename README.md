@@ -19,11 +19,11 @@
 
 
 ## Primera version
-<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/logo.png" width="400" height="300">
-<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/api.png" width="400" height="300">
-<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/get.png" width="400" height="300">
-<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/load.png" width="400" height="300">
-<img style="margin: auto;" src="https://haku777.com/img/versiones/nexos/mvc.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.vercel.app/files/img/versiones/nexos/logo.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.vercel.app/files/img/versiones/nexos/api.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.vercel.app/files/img/versiones/nexos/get.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.vercel.app/files/img/versiones/nexos/load.png" width="400" height="300">
+<img style="margin: auto;" src="https://haku777.vercel.app/files/img/versiones/nexos/mvc.png" width="400" height="300">
 <img src="https://haku777.com/img/examples/develop.jpg" width="400" height="300">
 
 > Creado por <a href="https://haku777.com/" target="_blank">Jimmy Yahir Gutierrez</a> &copy; Sep 18, 2023
